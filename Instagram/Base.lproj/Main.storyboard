@@ -279,26 +279,41 @@
         <!--Comment View Controller-->
         <scene sceneID="3rW-1O-ke5">
             <objects>
-                <viewController storyboardIdentifier="CommentViewController" id="XxJ-e5-skV" customClass="commentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XxJ-e5-skV" customClass="commentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ikc-Fs-obV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rob-VL-03p">
-                                <rect key="frame" x="10" y="94" width="394" height="768"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rob-VL-03p">
+                                <rect key="frame" x="10" y="94" width="394" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="IXg-2b-h4Q"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJ8-eT-aAe">
+                                <rect key="frame" x="176.66666666666666" y="337" width="61" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="投稿"/>
+                                <connections>
+                                    <action selector="commentsend:" destination="XxJ-e5-skV" eventType="touchUpInside" id="yrt-bm-Kqw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xUa-yz-S7p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xJ8-eT-aAe" firstAttribute="centerX" secondItem="Ikc-Fs-obV" secondAttribute="centerX" id="PgS-j1-Xlp"/>
                             <constraint firstItem="Rob-VL-03p" firstAttribute="top" secondItem="xUa-yz-S7p" secondAttribute="top" constant="50" id="i1c-ki-zhb"/>
                             <constraint firstItem="Rob-VL-03p" firstAttribute="leading" secondItem="xUa-yz-S7p" secondAttribute="leading" constant="10" id="jyy-RJ-cGc"/>
-                            <constraint firstItem="xUa-yz-S7p" firstAttribute="bottom" secondItem="Rob-VL-03p" secondAttribute="bottom" id="qDe-M9-eeH"/>
+                            <constraint firstItem="xJ8-eT-aAe" firstAttribute="top" secondItem="Rob-VL-03p" secondAttribute="bottom" constant="43" id="lR8-OE-Hc7"/>
                             <constraint firstAttribute="trailing" secondItem="Rob-VL-03p" secondAttribute="trailing" constant="10" id="yU8-iE-8hC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="commentfield" destination="Rob-VL-03p" id="Y1a-dB-z8O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6g-nN-iDx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
