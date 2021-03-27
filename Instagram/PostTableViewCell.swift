@@ -17,7 +17,7 @@ class PostTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var commentButton: UIButton!
-    @IBOutlet weak var commentname: UILabel!
+
     
     
     
@@ -66,27 +66,25 @@ class PostTableViewCell: UITableViewCell, UITextFieldDelegate {
                self.likeButton.setImage(buttonImage, for: .normal)
            }
         let commentNumber = postData.comment.count
-        var Comment: String = ""
-        var i = 0
-        print("デバッグ２")
-        print("debaggu\(commentNumber)")
-    
-        func commentsend() {
-            Comment += "\(postData.comment[i])"
-            print("デバッグ")
-            print(commentNumber)
-            print(postData.comment[i])
-            if i == commentNumber - 1 {return}
-            i += 1
-            
-        }
-        Comment += "\(postData.comment[i])"
+        //var Comment: String = ""
+        //var i = 0
+       
         
-        if Comment == "" {
-            commentLabel.isHidden = true
-        } else {commentLabel.isHidden = false
-            self.commentLabel.text = Comment
+    
+        var joinedcomment: String = ""
+        
+        for Comment in postData.comment {
+            
+            joinedcomment.append(Comment)
+            joinedcomment.append("\n")
+            print(joinedcomment)
         }
+            if joinedcomment == "" {
+                commentLabel.isHidden = true
+            } else {commentLabel.isHidden = false
+                self.commentLabel.text = joinedcomment
+               
+            }
         
        
    

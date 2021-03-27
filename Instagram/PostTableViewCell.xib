@@ -47,13 +47,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdD-8w-F4u">
-                        <rect key="frame" x="30" y="540" width="42" height="98"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vi-96-Ez6">
-                        <rect key="frame" x="30" y="648" width="42" height="21"/>
+                        <rect key="frame" x="30" y="540" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -67,10 +61,7 @@
                         <state key="normal" title="Button" backgroundImage="comment"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHn-Tg-6t1">
-                        <rect key="frame" x="30" y="679" width="439" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="ca5-0c-bRq"/>
-                        </constraints>
+                        <rect key="frame" x="30" y="601.5" width="439" height="107.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -81,10 +72,8 @@
                     <constraint firstItem="wAM-4t-LDV" firstAttribute="centerY" secondItem="8hy-cT-M6G" secondAttribute="centerY" id="4O4-Rw-WE0"/>
                     <constraint firstItem="qdD-8w-F4u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="5QH-J4-RLg"/>
                     <constraint firstItem="8hy-cT-M6G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="6PZ-ZL-JLu"/>
-                    <constraint firstItem="uHn-Tg-6t1" firstAttribute="top" secondItem="9vi-96-Ez6" secondAttribute="bottom" constant="10" id="AjC-8I-sww"/>
-                    <constraint firstItem="9vi-96-Ez6" firstAttribute="top" secondItem="qdD-8w-F4u" secondAttribute="bottom" constant="10" id="IZg-rk-ucV"/>
+                    <constraint firstItem="uHn-Tg-6t1" firstAttribute="top" secondItem="qdD-8w-F4u" secondAttribute="bottom" constant="41" id="AjC-8I-sww"/>
                     <constraint firstItem="8F3-uT-QaR" firstAttribute="leading" secondItem="8hy-cT-M6G" secondAttribute="trailing" constant="10" id="IoS-wF-bGq"/>
-                    <constraint firstItem="9vi-96-Ez6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="JqT-db-UJP"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bNB-nw-Oxw" secondAttribute="trailing" id="QQH-sa-r3d"/>
                     <constraint firstItem="uHn-Tg-6t1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="TZ5-Nm-Qee"/>
                     <constraint firstItem="Ls0-Hg-y6r" firstAttribute="leading" secondItem="8F3-uT-QaR" secondAttribute="trailing" constant="10" id="Vif-69-Od8"/>
@@ -104,7 +93,6 @@
                 <outlet property="captionLabel" destination="qdD-8w-F4u" id="ISH-uI-XfK"/>
                 <outlet property="commentButton" destination="Ls0-Hg-y6r" id="xrO-dz-uNY"/>
                 <outlet property="commentLabel" destination="uHn-Tg-6t1" id="UNE-fz-8zE"/>
-                <outlet property="commentname" destination="9vi-96-Ez6" id="CPH-dK-p6J"/>
                 <outlet property="dateLabel" destination="wAM-4t-LDV" id="gmi-ti-huC"/>
                 <outlet property="likeButton" destination="8hy-cT-M6G" id="Agg-gw-Rcf"/>
                 <outlet property="likeLabal" destination="8F3-uT-QaR" id="Ig4-8v-tlP"/>

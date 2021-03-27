@@ -10,7 +10,12 @@ import Firebase
 
 class commentViewController: UIViewController,UITextFieldDelegate {
     
+    
+    
+   
     var postDataID = ""
+    
+    
     
     @IBOutlet weak var commentfield: UITextField!
     
@@ -18,12 +23,24 @@ class commentViewController: UIViewController,UITextFieldDelegate {
     @IBAction func commentsend(_ sender: Any) {
         // commentを更新する
        
-        let commenttext = commentfield.text
-        //新たにコメントfield追加
-            let updateValue = FieldValue.arrayUnion([commenttext])
+        if let name = Auth.auth().currentUser?.displayName {
+            let commenttext = commentfield.text!
+            let viewcomment = "\(String(describing: name))       \(String(describing: commenttext))"
+            
+            
+            var updateValue: FieldValue
+            //新たにコメントfield追加
+            updateValue = FieldValue.arrayUnion([viewcomment])
+            
             // commentに更新データを書き込む
             let postRef = Firestore.firestore().collection(Const.PostPath).document(postDataID)
             postRef.updateData(["comment":  updateValue])
+        }
+        
+        
+        
+        
+           
         
         //投稿処理が完了したので先頭画面に戻る
         UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
